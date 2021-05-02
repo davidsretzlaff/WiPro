@@ -1,0 +1,35 @@
+1. COM BASE NO MODELO ACIMA, ESCREVA UM COMANDO SQL QUE LISTE A QUANTIDADE DE PROCESSOS POR STATUS COM SUA DESCRIÇÃO.
+
+select count(p.IdProcesso) as quantidadeProcesso, s.dsStatus from tb_Processo p with(nolock)
+inner join tb_Status s with(nolock) on s.idStatus = p.idStatus
+group by s.dsStatus
+
+
+
+2. COM BASE NO MODELO ACIMA, CONSTRUA UM COMANDO SQL QUE LISTE A MAIOR DATA DE ANDAMENTO POR NÚMERO DE PROCESSO, COM PROCESSOS ENCERRADOS NO ANO DE 2013.
+
+select distinct a.idProcesso,a2.maxDate as maiordataandamento, a2.quantidadeProcesso from tb_Andamento a with(nolock)
+inner join(
+select max(a2.dtandamento) as maxDate,count(a2.idProcesso) as quantidadeProcesso, a2.idProcesso from tb_Andamento a2
+inner join tb_Processo p with(nolock) on p.IdProcesso = a2.idProcesso 
+inner join tb_Status s with(nolock) on s.idStatus = p.idStatus
+where  p.DtEncerramento >= '2013-01-01' AND p.DtEncerramento <= '2013-12-31' 
+and s.idStatus = 2 -- STATUS ENCERRADO 
+group by a2.idProcesso 
+) a2 
+on a.idProcesso = a2.idProcesso 
+
+
+
+3. COM BASE NO MODELO ACIMA, CONSTRUA UM COMANDO SQL QUE LISTE A QUANTIDADE DE DATA DE ENCERRAMENTO AGRUPADA POR ELA MESMA ONDE A QUANTIDADE DA CONTAGEM SEJA MAIOR QUE 5.
+
+select COUNT(DtEncerramento), DtEncerramento from tb_Processo 
+group by DtEncerramento
+HAVING COUNT(DtEncerramento) > 5
+
+
+4. POSSUÍMOS UM NÚMERO DE IDENTIFICAÇÃO DO PROCESSO, ONDE O MESMO CONTÉM 12 CARACTERES COM ZERO À ESQUERDA, 
+CONTUDO NOSSO MODELO E DADOS ELE É APRESENTADO COMO BIGINT. COMO FAZER PARA APRESENTA-LO COM 12 CARACTERES CONSIDERANDO OS ZEROS A ESQUERDA?
+
+SELECT REPLACE(STR(nroProcesso, 12), SPACE(1), '0') AS [padded_id]
+FROM tb_Processo
