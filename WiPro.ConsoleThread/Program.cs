@@ -25,25 +25,34 @@ namespace WiPro.ConsoleThread
 
         public static async void StartThread()
         {
-            Coin coin = await CallApiGetItemFila();
-            List<CoinData> coinDataList = GetCoinData(coin);
-            List<PriceData> coinPriceDataList = GetPricesData();
-            List<CoinPrice> coinPriceList = ReadPriceTable();
-
-            List<ResultCoinPrice> result = (from c in coinDataList
-                          join cp in coinPriceList on c.ID_MOEDA equals cp.ID_MOEDA
-                          join cpd in coinPriceDataList on cp.cod_cotacao equals cpd.cod_cotacao
-                          select new ResultCoinPrice 
-                          {
-                              ID_MOEDA = c.ID_MOEDA,
-                              DATA_REF = cpd.dat_cotacao,
-                              VL_COTACAO = cpd.vlr_cotacao
-
-                          }).ToList();
-
-            if(result != null && result.Count > 0)
+            int count = 0;
+            while(true)
             {
-                SaveResult(result);
+                var startTime = DateTime.Now;
+                Coin coin = await CallApiGetItemFila();
+                List<CoinData> coinDataList = GetCoinData(coin);
+                List<PriceData> coinPriceDataList = GetPricesData();
+                List<CoinPrice> coinPriceList = ReadPriceTable();
+
+                List<ResultCoinPrice> result = (from c in coinDataList
+                            join cp in coinPriceList on c.ID_MOEDA equals cp.ID_MOEDA
+                            join cpd in coinPriceDataList on cp.cod_cotacao equals cpd.cod_cotacao
+                            select new ResultCoinPrice 
+                            {
+                                ID_MOEDA = c.ID_MOEDA,
+                                DATA_REF = cpd.dat_cotacao,
+                                VL_COTACAO = cpd.vlr_cotacao
+
+                            }).ToList();
+
+                if(result != null && result.Count > 0)
+                {
+                    SaveResult(result);
+                }
+                TimeSpan endTime = DateTime.Now - startTime;
+                count ++;
+                Console.Write($"\n {count} executou no tempo de: {endTime.ToString()} a {coin.Description}, {coin.Message}\n");
+                Thread.Sleep(3000);
             }
         }
         private static async Task<Coin> CallApiGetItemFila()
@@ -133,8 +142,7 @@ namespace WiPro.ConsoleThread
 
         private static void SaveResult(List<ResultCoinPrice> result)
         {
-            var name = "Resultado_" + DateTime.Now.ToString("yyyymmdd_HHmmss") + ".csv";
-
+            var name = "Resultado_" + DateTime.Now.ToString("yyyymmdd_HHmmss") + ".csv";            
             using (var file = File.CreateText(pathBase + @"\" + name))
             {
                 file.WriteLine("ID_MOEDA;DATA_REF;VL_COTACAO");
