@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using WiPro.BusinessRule.Interface;
 using WiPro.Domain.Entity;
 using WiPro.Domain.EntityDto;
 using WiPro.Service.Interface;
@@ -7,21 +8,21 @@ namespace WiPro.Service.Service
 {
     public class QueueWaitingService : IQueueWaitingService
     {
-        private readonly IQueueWaitingService _queueWaitingService;
+        private readonly IQueueWaitingRepository _queueWaitingRepository;
 
-        public QueueWaitingService(IQueueWaitingService queueWaitingService)
+        public QueueWaitingService(IQueueWaitingRepository queueWaitingRepository)
         {
-            _queueWaitingService = queueWaitingService;
+            _queueWaitingRepository = queueWaitingRepository;
         }
 
         public string AddItens(List<CoinDto> listCoin)
         {
-            return _queueWaitingService.AddItens(listCoin);
+            return _queueWaitingRepository.AddItens(listCoin);
         }
 
         public string GetList()
         {
-            return _queueWaitingService.GetList();
+            return _queueWaitingRepository.GetList();
         }
     }
 }

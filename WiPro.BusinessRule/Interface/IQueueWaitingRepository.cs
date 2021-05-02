@@ -6,7 +6,6 @@ namespace WiPro.BusinessRule.Interface
 {
     public interface IQueueWaitingRepository
     {
-
         string AddItens(List<CoinDto> listCoin);
 
         string GetList();

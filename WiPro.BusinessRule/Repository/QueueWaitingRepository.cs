@@ -58,7 +58,7 @@ namespace WiPro.BusinessRule.Repository
                     Coin lastExclude = context.Coin.Find(lastCoin.Id);
                     context.Coin.Remove(lastExclude);
                     context.SaveChanges();
-
+                    lastCoin.Message = "Item removido";
                     return JsonConvert.SerializeObject(lastCoin, new JsonSerializerSettings() { DateFormatString = "yyyy-MM-dd" }).ToString();
                 }
             }
