@@ -6,10 +6,12 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0"/>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0"/>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WiPro.Domain\WiPro.Domain.csproj"/>
     <ProjectReference Include="..\WiPro.Service\WiPro.Service.csproj"/>
     <ProjectReference Include="..\WiPro.Data\WiPro.Data.csproj"/>
+    <ProjectReference Include="..\WiPro.BusinessRule\WiPro.BusinessRule.csproj"/>
   </ItemGroup>
 </Project>
