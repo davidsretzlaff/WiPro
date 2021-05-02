@@ -52,7 +52,7 @@ namespace WiPro.ConsoleThread
                 TimeSpan endTime = DateTime.Now - startTime;
                 count ++;
                 Console.Write($"\n {count} executou no tempo de: {endTime.ToString()} a {coin.Description}, {coin.Message}\n");
-                Thread.Sleep(3000);
+                Thread.Sleep(120000);
             }
         }
         private static async Task<Coin> CallApiGetItemFila()
