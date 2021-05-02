@@ -11,3 +11,5 @@ C:\Users\renat\Documents\jsraiz\WiPro\WiPro.Service\obj\Debug\netstandard2.0\WiP
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.Service\obj\Debug\netstandard2.0\WiPro.Service.csproj.CopyComplete
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.Service\obj\Debug\netstandard2.0\WiPro.Service.dll
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.Service\obj\Debug\netstandard2.0\WiPro.Service.pdb
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.Service\bin\Debug\netstandard2.0\WiPro.Data.dll
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.Service\bin\Debug\netstandard2.0\WiPro.Data.pdb

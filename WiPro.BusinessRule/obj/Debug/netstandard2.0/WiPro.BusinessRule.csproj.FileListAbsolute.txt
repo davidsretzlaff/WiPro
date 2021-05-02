@@ -9,3 +9,5 @@ C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.0\WiPro.BusinessRule.csproj.CopyComplete
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.0\WiPro.BusinessRule.dll
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.0\WiPro.BusinessRule.pdb
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\bin\Debug\netstandard2.0\WiPro.Data.dll
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\bin\Debug\netstandard2.0\WiPro.Data.pdb

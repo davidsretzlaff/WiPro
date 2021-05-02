@@ -2,10 +2,11 @@ using System.Collections.Generic;
 using WiPro.Domain.Entity;
 using WiPro.Domain.EntityDto;
 
-namespace WiPro.Service.Interface
+namespace WiPro.BusinessRule.Interface
 {
-    public interface IQueueWaitingService
+    public interface IQueueWaitingRepository
     {
+
         string AddItens(List<CoinDto> listCoin);
 
         string GetList();

@@ -3,7 +3,10 @@
     <ProjectReference Include="..\WiPro.Domain\WiPro.Domain.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    
+    <ProjectReference Include="..\WiPro.Data\WiPro.Data.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0"/>
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>

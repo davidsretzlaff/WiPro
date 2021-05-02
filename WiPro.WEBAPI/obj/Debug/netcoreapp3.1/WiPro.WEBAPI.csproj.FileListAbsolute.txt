@@ -7,8 +7,6 @@ C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\WiPro
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\WiPro.WEBAPI.runtimeconfig.dev.json
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\WiPro.WEBAPI.dll
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\WiPro.WEBAPI.pdb
-C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
-C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\WiPro.BusinessRule.dll
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\WiPro.Domain.dll
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\WiPro.Service.dll

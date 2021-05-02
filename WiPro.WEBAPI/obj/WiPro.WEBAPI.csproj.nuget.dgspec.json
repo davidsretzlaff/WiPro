@@ -30,6 +30,9 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
+              "C:\\Users\\renat\\Documents\\jsraiz\\WiPro\\WiPro.Data\\WiPro.Data.csproj": {
+                "projectPath": "C:\\Users\\renat\\Documents\\jsraiz\\WiPro\\WiPro.Data\\WiPro.Data.csproj"
+              },
               "C:\\Users\\renat\\Documents\\jsraiz\\WiPro\\WiPro.Domain\\WiPro.Domain.csproj": {
                 "projectPath": "C:\\Users\\renat\\Documents\\jsraiz\\WiPro\\WiPro.Domain\\WiPro.Domain.csproj"
               }
@@ -45,6 +48,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -325,10 +332,6 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.0, )"
-            },
-            "RabbitMQ.Client": {
-              "target": "Package",
-              "version": "[6.2.1, )"
             }
           },
           "imports": [

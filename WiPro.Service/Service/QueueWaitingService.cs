@@ -13,23 +13,15 @@ namespace WiPro.Service.Service
         {
             _queueWaitingService = queueWaitingService;
         }
-        public Coin AddItem(Coin item)
-        {
-            return _queueWaitingService.AddItem(item);
-        }
 
-        public Coin AddItemRanger(List<CoinDto> listCoin)
+        public string AddItens(List<CoinDto> listCoin)
         {
-            return _queueWaitingService.AddItemRanger(listCoin);
+            return _queueWaitingService.AddItens(listCoin);
         }
 
         public string GetList()
         {
             return _queueWaitingService.GetList();
-        }
-        public void ValidList(List<CoinDto> listCoin)
-        {
-            _queueWaitingService.ValidList(listCoin);
         }
     }
 }

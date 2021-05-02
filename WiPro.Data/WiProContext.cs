@@ -15,6 +15,8 @@ namespace WiPro.Data
         
         public WiProContext(DbContextOptions<WiProContext> options) : base (options){}
         
+        public WiProContext()
+        {}
 
         public DbSet<Coin> Coin { get; set; }
 
