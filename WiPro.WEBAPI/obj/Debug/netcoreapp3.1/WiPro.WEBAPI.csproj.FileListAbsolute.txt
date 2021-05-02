@@ -48,3 +48,4 @@ C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\runti
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\WiPro.Data.dll
 C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\WiPro.Data.pdb
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.WEBAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
