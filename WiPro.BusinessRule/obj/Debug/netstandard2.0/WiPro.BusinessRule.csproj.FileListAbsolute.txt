@@ -1,0 +1,11 @@
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\bin\Debug\netstandard2.0\WiPro.BusinessRule.deps.json
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\bin\Debug\netstandard2.0\WiPro.BusinessRule.dll
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\bin\Debug\netstandard2.0\WiPro.BusinessRule.pdb
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\bin\Debug\netstandard2.0\WiPro.Domain.dll
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\bin\Debug\netstandard2.0\WiPro.Domain.pdb
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.0\WiPro.BusinessRule.csprojAssemblyReference.cache
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.0\WiPro.BusinessRule.AssemblyInfoInputs.cache
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.0\WiPro.BusinessRule.AssemblyInfo.cs
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.0\WiPro.BusinessRule.csproj.CopyComplete
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.0\WiPro.BusinessRule.dll
+C:\Users\renat\Documents\jsraiz\WiPro\WiPro.BusinessRule\obj\Debug\netstandard2.0\WiPro.BusinessRule.pdb
