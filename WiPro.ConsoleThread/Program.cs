@@ -26,7 +26,8 @@ namespace WiPro.ConsoleThread
         public static async void StartThread()
         {
             Coin coin = await CallApiGetItemFila();
-            var coinDataList = GetCoinData(coin);
+            List<CoinData> coinDataList = GetCoinData(coin);
+            List<PriceData> coinPriceList = GetPricesData();
 
         }
         private static async Task<Coin> CallApiGetItemFila()
@@ -51,7 +52,7 @@ namespace WiPro.ConsoleThread
             }
         }
 
-        public static List<CoinData> GetCoinData(Coin coin)
+        private static List<CoinData> GetCoinData(Coin coin)
         {
             List<CoinData> coinDataList = new List<CoinData>();
             var list = File.ReadAllLines(@$"{pathBase}\DadosMoeda.csv");
@@ -77,6 +78,28 @@ namespace WiPro.ConsoleThread
                 && x.DATA_REF <= coin.EndDate).ToList();
         }
 
-        
+        private static List<PriceData> GetPricesData()
+        {
+            List<PriceData> pricesData = new List<PriceData>();
+            var list = File.ReadAllLines(@$"{pathBase}\DadosCotacao.csv");
+            foreach(var row in list)
+            {
+                if (row == "vlr_cotacao;cod_cotacao;dat_cotacao")
+                    continue;
+                
+                string[] values = row.Split(';');
+                if(values != null && values.Length == 3)
+                {
+                    pricesData.Add(new PriceData()
+                    {
+                        vlr_cotacao = decimal.Parse(values[0].ToString()),
+                        cod_cotacao = int.Parse(values[1].ToString()),
+                        dat_cotacao = Convert.ToDateTime(values[2])
+                    });
+                }
+            }
+
+            return pricesData;
+        }
     }
 }
