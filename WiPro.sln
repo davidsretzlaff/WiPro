@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiPro.Domain", "WiPro.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiPro.BusinessRule", "WiPro.BusinessRule\WiPro.BusinessRule.csproj", "{9C14DCAF-9C62-460A-AA28-6CB9AFBDB382}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiPro.Data", "WiPro.Data\WiPro.Data.csproj", "{2DB75699-D979-4CC4-A777-E2F3C3885C2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{9C14DCAF-9C62-460A-AA28-6CB9AFBDB382}.Release|x64.Build.0 = Release|Any CPU
 		{9C14DCAF-9C62-460A-AA28-6CB9AFBDB382}.Release|x86.ActiveCfg = Release|Any CPU
 		{9C14DCAF-9C62-460A-AA28-6CB9AFBDB382}.Release|x86.Build.0 = Release|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Debug|x64.Build.0 = Debug|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Debug|x86.Build.0 = Debug|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Release|x64.ActiveCfg = Release|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Release|x64.Build.0 = Release|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Release|x86.ActiveCfg = Release|Any CPU
+		{2DB75699-D979-4CC4-A777-E2F3C3885C2A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -3,10 +3,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="RabbitMQ.Client" Version="6.2.1" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.2.1"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WiPro.Domain\WiPro.Domain.csproj" />
-    <ProjectReference Include="..\WiPro.Service\WiPro.Service.csproj" />
+    <ProjectReference Include="..\WiPro.Domain\WiPro.Domain.csproj"/>
+    <ProjectReference Include="..\WiPro.Service\WiPro.Service.csproj"/>
+    <ProjectReference Include="..\WiPro.Data\WiPro.Data.csproj"/>
   </ItemGroup>
 </Project>
