@@ -20,24 +20,34 @@ namespace WiPro.ConsoleThread
             Console.WriteLine("Inicio Thread");
             Thread thread = new Thread(StartThread);
             thread.Start();
-            
+
         }
 
         public static async void StartThread()
         {
-            Console.WriteLine("teste");
-            using (var client = new HttpClient())
+            Coin coin = await CallApiGetItemFila();
+
+        }
+        private async Task<Coin> CallApiGetItemFila()
+        {
+            try
             {
-                client.BaseAddress = new Uri("http://localhost:5000/api/QueueWaiting/");
-                var response = client.GetAsync("GetItemFila").Result;
-                if (response != null && response.IsSuccessStatusCode)
+                using (var client = new HttpClient())
                 {
-                    string coin = await response.Content.ReadAsStringAsync();
-                    var x = JsonConvert.DeserializeObject<Coin>(coin);
+                    client.BaseAddress = new Uri("http://localhost:5000/api/QueueWaiting/");
+                    var response = client.GetAsync("GetItemFila").Result;
+                    if (response != null && response.IsSuccessStatusCode)
+                    {
+                        string coin = await response.Content.ReadAsStringAsync();
+                        return = JsonConvert.DeserializeObject<Coin>(coin);
+                    }
+                     return new Coin() { Id = -1, Mensagem = "Nenhum registro na base" };
                 }
-                // return new Coin() { Id = -1, Mensagem = "Nenhum registro na base" };
             }
-            
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
     }
 }
