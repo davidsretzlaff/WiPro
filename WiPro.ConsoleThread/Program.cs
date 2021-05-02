@@ -27,8 +27,24 @@ namespace WiPro.ConsoleThread
         {
             Coin coin = await CallApiGetItemFila();
             List<CoinData> coinDataList = GetCoinData(coin);
-            List<PriceData> coinPriceList = GetPricesData();
+            List<PriceData> coinPriceDataList = GetPricesData();
+            List<CoinPrice> coinPriceList = ReadPriceTable();
 
+            List<ResultCoinPrice> result = (from c in coinDataList
+                          join cp in coinPriceList on c.ID_MOEDA equals cp.ID_MOEDA
+                          join cpd in coinPriceDataList on cp.cod_cotacao equals cpd.cod_cotacao
+                          select new ResultCoinPrice 
+                          {
+                              ID_MOEDA = c.ID_MOEDA,
+                              DATA_REF = cpd.dat_cotacao,
+                              VL_COTACAO = cpd.vlr_cotacao
+
+                          }).ToList();
+
+            if(result != null && result.Count > 0)
+            {
+                SaveResult(result);
+            }
         }
         private static async Task<Coin> CallApiGetItemFila()
         {
@@ -100,6 +116,33 @@ namespace WiPro.ConsoleThread
             }
 
             return pricesData;
+        }
+
+        private static List<CoinPrice> ReadPriceTable()
+        {
+            List<CoinPrice> coinPrices = new List<CoinPrice>();
+            using (StreamReader r = new StreamReader(pathBase + @"\TablePrices.json"))
+            {
+
+                string dados = r.ReadToEnd();
+                coinPrices = JsonConvert.DeserializeObject<List<CoinPrice>>(dados);
+            }
+
+            return coinPrices;
+        }
+
+        private static void SaveResult(List<ResultCoinPrice> result)
+        {
+            var name = "Resultado_" + DateTime.Now.ToString("yyyymmdd_HHmmss") + ".csv";
+
+            using (var file = File.CreateText(pathBase + @"\" + name))
+            {
+                file.WriteLine("ID_MOEDA;DATA_REF;VL_COTACAO");
+                foreach (var arr in result)
+                {
+                    file.WriteLine(arr.ID_MOEDA + ";" + arr.DATA_REF + ";" + arr.VL_COTACAO); // string.Join(",", arr));
+                }
+            }
         }
     }
 }
